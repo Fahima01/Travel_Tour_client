@@ -1,0 +1,34 @@
+[
+    {
+        "id": "01",
+        "title": "Standard Deluxe",
+        "rating": 5,
+        "img": "https://i.ibb.co/fvY8X5V/christopher-jolly-Gqb-U78bd-JFM-unsplash-900x500.jpg",
+        "discount": 25,
+        "price": 70
+    },
+    {
+        "id": "01",
+        "title": "The Penthouse",
+        "rating": 5,
+        "img": "https://i.ibb.co/Cngnr1P/andrew-neel-T0eb55-Dx-DN4-unsplash-900x500.jpg",
+        "discount": 30,
+        "price": 50
+    },
+    {
+        "id": "01",
+        "title": "Grand Suite Room",
+        "rating": 5,
+        "img": "https://i.ibb.co/1r5T4Q0/shop-slo-vhztm9-QC0-L0-unsplash-900x500.jpg",
+        "discount": 55,
+        "price": 55
+    },
+    {
+        "id": "01",
+        "title": "Junior Suite Room",
+        "rating": 5,
+        "img": "https://i.ibb.co/jhy0GcG/collov-home-design-LSpk-E5-OCD-8-unsplash-900x500.jpg",
+        "discount": 20,
+        "price": 40
+    }
+]

@@ -1,0 +1,68 @@
+[
+    {
+        "id": "01",
+        "title": "Argentina Great Diving Trip",
+        "rating": 5,
+        "img": "https://i.ibb.co/C0df6dw/argentina-great-diving-trip-500x500.png",
+        "discount": 25,
+        "price": 1200,
+        "staying": "2 days and 1 night",
+        "des_title": "Explore diving in Argentina",
+        "discription": "Incredible diversity awaits you whilst diving in Argentina. From the cold waters of Ushuaia and Tierra de Fuego to the abundant sea lions and elephant seals of Peninsula Valdes, it's a feast for the senses right across this gorgeous country. Peninsula Valdes is home to an important breeding population of the endangered Southern Right whale, as well as important breeding populations of southern elephant seals and southern sea lions. You might even hear whale song all the way through a dive! The Monte Cervantes Shipwreck at Ushuaia was discovered relatively recently and is the main attraction of the Beagle Channel. "
+    },
+    {
+        "id": "02",
+        "title": "America Grand canyon, Golden Gate",
+        "rating": 5,
+        "img": "https://i.ibb.co/J5vwQ51/2710683-F573-EA12-E12.jpg",
+        "discount": 35,
+        "price": 1200,
+        "staying": "2 days and 1 night",
+        "des_title": "Immersive Grand Canyon and the South West",
+        "discription": "Self-drive through magnificent Arizona and Utah and enjoy a private guided exploration of the Grand Canyon on this classic Grand Canyon itinerary. Spending two nights on the canyon rim, you'll enjoy a half-day float trip through the canyon and hike less-visited trails. You'll make the most of the area's spectacular National Parks with your own SUV and driver-guide for three days in Utah. And there's more to this itinerary than sculptural rock formations and sweeping views. Your holiday starts amid the serenity of Scottsdale, Arizona, and closes with the vigour and vim of sparkling Las Vegas. With technology and manufacturing evolving at a rapid pace, some Americans began to wonder if these new advancements were having negative effects on the environment. This concern birthed the conservation movement and the effort to preserve our nation’s natural wonders for generations to come. Artist Thomas Moran accompanied the first federally funded geological survey to Yellowstone to help document and explore features of the region. "
+    },
+    {
+        "id": "03",
+        "title": "Austria – 6 Days in Vienna, Hallstatt",
+        "rating": 5,
+        "img": "https://i.ibb.co/F0XFyK1/d1e44158703cfda5ace910f51dc24978-1.jpg",
+        "discount": 45,
+        "price": 4200,
+        "staying": "6 days and 5 night",
+        "des_title": "Austria Tours & Holidays",
+        "discription": "Enjoy a comprehensive, 6-day tour of Austria from Vienna to Salzburg. Spend four nights in 3- or 4-star hotels and explore the country’s top attractions and UNESCO-listed sites. See Mozart's birthplace and the Mirabell Gardens in Salzburg, and wander the grounds of Vienna’s spectacular Schonbrunn Palace. Learn the rich history of each city from your guide as you soak up a stunning overview of Austrian culture and landscape. Your trip will conclude with round-trip transportation back to Vienna. Our Austria tours offer more than what comes from a guidebook with unique, immersive experiences curated by our knowledgable Destination Experts and hosted by passionate local private guides who know every corner of the cities and countrysides that make this Eastern European country so unique. Plus, know your investment is protected with round-the-clock support should you wish to alter your plans and itinerary on the fly."
+    },
+    {
+        "id": "04",
+        "title": "Two Moscow Tour of 7 days",
+        "rating": 5,
+        "img": "https://i.ibb.co/rd271V9/1594392393-shutterstock-508812862-jpg.jpg",
+        "discount": 55,
+        "price": 5300,
+        "staying": "7 days and 6 night",
+        "des_title": "Tolstoy Moscow Tour: Places linked to Leo Tolstoy in Moscow",
+        "discription": "Hit up many of Moscow’s top attractions all in two days during this private tour where your guide meets you right in your hotel lobby with a personalized itinerary. Along with visiting Kolomenskoye Museum and Reserve or Tsaritsino Park, see St. Basil’s Cathedral in Red Square, the Kremlin and its cathedrals, and old town Moscow. Plus, your guide knows the best ways around the city so you can fit as much into your two days as possible. This short Moscow tour will give you a true taste of the history, culture and incomparable urban vibe that define one of the world’s largest metropolises. In just three days, this Moscow itinerary takes in all the most iconic sights of this attraction-packed destination. After two and half days getting acquainted with the city, we’ve set time aside for you to explore Moscow your way and discover your own favourite hang-outs in a city overflowing with hidden treasures"
+    },
+    {
+        "id": "05",
+        "title": "Venice, Rome and Milan – 9 Days",
+        "rating": 5,
+        "img": "https://i.ibb.co/8XNy4D9/Venice-Tours-a-1.jpg",
+        "discount": 25,
+        "price": 1200,
+        "staying": "2 days and 1 night",
+        "des_title": "Overland Italy tour - Rome, Naples, Pisa, Florence, Venice, Milan",
+        "discription": "This travel package is a complete overland tour of Italy that will make you visit all the most important art cities of this unique country in Europe. From Rome to Milan and Naples, we are sure that your holiday and vacation will be unforgettable, a real journey through the history, art and culture of Italy. This is just a sample itinerary that can be changed and tailormade according to your wishes. Rome, the “Eternal City,” brims with ancient history, from the Colosseum to the port of Ostia Antica to majestic Vatican City and the Sistine Chapel. Because of its history, art, architecture, and beauty – and perhaps its gelato and pasta! – Rome is one of our most popular cities Venice. Venice is an enchanting city that casts visitors under an intoxicating spell. It’s dreamy and romantic, with an undercurrent of mystery and drama. While Carnival is only once a year, its mood is present year-round. The Grand Canal is the centre of activity, with gondoliers singing to the passengers in their boats. The magnificent Piazza Sam Marco is another must-see hub. Along the winding streets you’ll find stylish cafes and gelaterias, souvenir shops and small businesses, plus Renaissance palaces and Gothic churches. After you've climbed the Campanille and visited the Gallerie dell Accademia, stroll through the surrounding neighbourhoods, where locals eat cicchitti and drink their vino in unfussy bars and restaurants.Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome, and a special comune named Comune di Roma Capitale."
+    },
+    {
+        "id": "06",
+        "title": "3-Day Oahu Tour: Honolulu",
+        "rating": 5,
+        "img": "https://i.ibb.co/K7WqK5z/Nordamerika-USA-Hawaii-Honolulu-1.jpg",
+        "discount": 45,
+        "price": 2000,
+        "staying": "3 days and 2 night",
+        "des_title": "Our Expert Tips for Your Honolulu Vacation",
+        "discription": "Honolulu is a fascinating metropolis that will delight you with gorgeous beaches and diverse influences. Located on the south coast of the island of Oahu, Honolulu is both the largest city and the capital of Hawaii. Throw yourself into the hustle and bustle of Honolulu, enjoy the breathtaking views from Diamond Head or relax on the famous Waikiki Beach. With Tourlane, you can book your flights, transfers, accommodations and guides - all in one place! Our Travel Experts will create your perfect tour package according to your travel tastes and preferences. In the Waikiki district, the legendary Waikiki Beach stretches about three and a half miles along the coast. Lined with palm trees, it is a wonderful place to sunbathe and swim during your trip to Honolulu. The beach is also considered a popular spot for surfing and is a point of attraction for those looking to get into Honolulu's nightlife. Located in the Capital Historic District in Downtown Honolulu, Iolani Palace served as the residence of the Hawaiian monarchy. Built from 1879 to 1882, the palace was the official residence of the last two monarchs of the Hawaiian Kingdom until 1893. Today, Iolani Palace is open to the public and private events, such as weddings, are also held at the property."
+    }
+]
