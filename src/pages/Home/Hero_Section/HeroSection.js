@@ -12,7 +12,7 @@ const HeroSection = () => {
                     <h1 className="lg:text-8xl md:text-6xl sm:text-5xl  mr-0 font-bold w-2/3">Find Next Place <br></br>
                         To <span className='text-emerald-400'> Visit!</span></h1>
 
-                    <p className="py-6 w-2/3">Discover amzaing places at exclusive deals.
+                    <p className="my-8 w-2/3 text-xl text-zinc-500">Discover amzaing places at exclusive deals.
                         Eat, Shop, Visit interesting places around the world.</p>
                     <button className=" px-4 py-2 shadow-xl font-bold text-xl border border-green-500 rounded-full  text-green-500 ">Book With us!</button>
                 </div>
