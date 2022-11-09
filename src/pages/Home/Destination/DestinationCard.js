@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const DestinationCard = ({ pakage }) => {
-    const { img, title, price, discount, staying } = pakage
+    const { _id, img, title, price, discount, staying } = pakage
     return (
         <div >
             <div className='group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow'>
@@ -22,7 +23,10 @@ const DestinationCard = ({ pakage }) => {
                                 <i> <FaStar></FaStar>  </i>
                             </div>
                         </div>
-                        <button className="btn btn-accent rounded-full">See details </button>
+                        <Link to={`/packagesDetails/${_id}`}>
+                            <button className="btn btn-accent rounded-full">See Details</button>
+                        </Link>
+
                     </div>
                 </div>
 

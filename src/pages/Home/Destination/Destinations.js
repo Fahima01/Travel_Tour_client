@@ -4,7 +4,7 @@ import DestinationCard from './DestinationCard';
 const Destinations = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('destination.json')
+        fetch('http://localhost:5000/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
 
