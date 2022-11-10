@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const DestinationCard = ({ pakage }) => {
-    const { _id, img, title, price, discount, staying } = pakage
+    const { _id, img, title, price, staying } = pakage
     return (
         <div >
             <div className='group relative items-center justify-center overflow-hidden cursor-pointer hover:shadow-xl hover:shadow-black/30 transition-shadow'>
