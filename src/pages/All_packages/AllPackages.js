@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import DestinationCard from './DestinationCard';
+import SinglePackageCard from './SinglePackageCard';
 
-const Destinations = () => {
-    const [packages, setPackages] = useState([]);
+
+const AllPackages = () => {
+    const [allPackages, setAllPackages] = useState([]);
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('http://localhost:5000/allpackages')
             .then(res => res.json())
-            .then(data => setPackages(data))
+            .then(data => setAllPackages(data))
 
     }, [])
     return (
@@ -21,19 +21,17 @@ const Destinations = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
-                    packages.map(pakage => <DestinationCard
-                        key={pakage._id}
-                        pakage={pakage}
-                    ></DestinationCard>)
+                    allPackages.map(singlePackage => <SinglePackageCard
+                        key={singlePackage._id}
+                        singlePackage={singlePackage}
 
+                    ></SinglePackageCard>)
                 }
 
             </div>
-            <Link to={'/allpackages'}>
-                <button className="btn btn-accent rounded-lg mt-10">See All</button>
-            </Link>
+
         </div>
     );
 };
 
-export default Destinations;
+export default AllPackages;

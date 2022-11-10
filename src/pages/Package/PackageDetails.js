@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../context/Authprovider';
 
 const PackageDetails = () => {
-    const { title, discription, des_title, img, discount, price
+    const { title, discription, des_title, img, discount, price,
+
     } = useLoaderData()
+    const { user } = useContext(AuthContext)
+
+    const hanldeAddReview = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const rating = `${form.rating.value}`;
+        const review = `${form.review.value}`;
+        const email = user?.email || 'unregistered';
+
+    }
+
+    // -------------------------
+
+
+
     return (
         <div className='h-auto bg-cyan-900 pt-2 pb-12'>
             <div className="w-2/3 mx-auto bg-slate-100 p-10 rounded-md">
@@ -32,11 +49,12 @@ const PackageDetails = () => {
 
             <div className="w-2/3 mx-auto bg-slate-100 mt-9 p-10 rounded-md">
                 <h2 className='text-2xl font-bold mb-5'>Leave a review of our service:</h2>
-                <form >
+                <form onSubmit={hanldeAddReview}>
 
-                    <input type="text" placeholder="Your email" className="input input-bordered w-full max-w-xs" />
-                    <input type="text" placeholder="Your name" className="input input-bordered w-full max-w-xs ml-3" />
-                    <select className="select w-full max-w-xs input-bordered  mt-4">
+                    <input type="text" placeholder="Your email" className="input input-bordered text-gray-500  w-full max-w-xs" name="email" defaultValue={user?.email} readOnly />
+                    <input type="text" placeholder="Your name" className="input input-bordered w-full max-w-xs ml-3" defaultValue={user?.displayName
+                    } />
+                    <select name='rating' className="select w-full max-w-xs input-bordered  mt-4 ">
                         <option disabled selected>Your rating</option>
                         <option>1 star</option>
                         <option> 2 star</option>
@@ -49,13 +67,17 @@ const PackageDetails = () => {
                         <label className="label">
                             <span className="label-text">Your review</span>
                         </label>
-                        <textarea className="textarea textarea-bordered h-24" placeholder="Write your thought"></textarea>
+                        <textarea name="review" className="textarea textarea-bordered h-24" placeholder="Write your thought"></textarea>
                     </div>
 
                     <input type="submit" value="Submit" className="btn btn-accent mt-4 " />
                 </form>
             </div>
+
+
         </div>
+
+
     );
 };
 

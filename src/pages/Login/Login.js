@@ -53,6 +53,8 @@ const Login = () => {
                 <p className='text-center'>New to <span>Travel Tour</span>? <Link className='font-bold text-lg text-pink-600' to='/signup'>Sign Up</Link> here</p>
             </div>
         </div>
+        // ----------------------
+
     );
 };
 
