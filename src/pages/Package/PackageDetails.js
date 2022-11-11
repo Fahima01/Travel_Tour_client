@@ -1,24 +1,61 @@
-import React, { useContext } from 'react';
-import { FaStar } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { FaStar, FaUser } from 'react-icons/fa';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/Authprovider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Review from '../Home/Home/Shared/Review/Review';
+
+
+
 
 const PackageDetails = () => {
-    const { title, discription, des_title, img, discount, price,
+    const { _id, title, discription, des_title, img, discount, price, } = useLoaderData()
 
-    } = useLoaderData()
     const { user } = useContext(AuthContext)
-
+    const notify = () =>
+        toast.success("Your Review added!!", {
+            position: "top-center",
+        });
     const hanldeAddReview = (event) => {
         event.preventDefault();
         const form = event.target;
-        const rating = `${form.rating.value}`;
-        const review = `${form.review.value}`;
+        const rating = form.rating.value;
+        const review = form.review.value;
+        const name = form.name.value;
+
         const email = user?.email || 'unregistered';
+
+        const userReview = {
+            packageId: _id,
+            PackageName: title,
+            email,
+            review,
+            rating,
+            name
+        }
+
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userReview)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+
+                    form.reset();
+                }
+
+            })
+            .catch(er => console.error(er));
+
 
     }
 
-    // -------------------------
 
 
 
@@ -52,7 +89,7 @@ const PackageDetails = () => {
                 <form onSubmit={hanldeAddReview}>
 
                     <input type="text" placeholder="Your email" className="input input-bordered text-gray-500  w-full max-w-xs" name="email" defaultValue={user?.email} readOnly />
-                    <input type="text" placeholder="Your name" className="input input-bordered w-full max-w-xs ml-3" defaultValue={user?.displayName
+                    <input name='name' type="text" placeholder="Your name" className="input input-bordered w-full max-w-xs ml-3" defaultValue={user?.displayName
                     } />
                     <select name='rating' className="select w-full max-w-xs input-bordered  mt-4 ">
                         <option disabled selected>Your rating</option>
@@ -69,15 +106,30 @@ const PackageDetails = () => {
                         </label>
                         <textarea name="review" className="textarea textarea-bordered h-24" placeholder="Write your thought"></textarea>
                     </div>
+                    {
+                        user?.email ?
+                            <>
+                                <button onClick={notify}>
+                                    <input type="submit" value="Submit" className="btn btn-accent mt-4 " />
+                                </button>
+                            </>
+                            :
+                            <Link to='/login'>
+                                <button className="btn btn-accent mt-4 " >
+                                    Submit
+                                </button>
+                            </Link>
+                    }
+                    <ToastContainer />
 
-                    <input type="submit" value="Submit" className="btn btn-accent mt-4 " />
                 </form>
+
             </div>
+            <div className='w-2/3 mx-auto bg-slate-100 p-10 rounded-md' >
+                <Review></Review>
 
-
+            </div>
         </div>
-
-
     );
 };
 
