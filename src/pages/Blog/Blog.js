@@ -5,7 +5,7 @@ const Blog = () => {
         <div className='h-auto bg-cyan-900 pt-2 pb-12'>
             <div className="w-2/3 mx-auto bg-slate-200 p-10 rounded-md">
                 <h1 className='text-3xl font-bold' >SQL vs NoSQL: 5 Critical Differences</h1>
-                <p>When choosing a modern database, one of the biggest decisions is picking a relational (SQL) or non-relational (NoSQL) data structure. While both are viable options, there are key differences between the two that users must keep in mind when making a decision.
+                <p className='py-5'>When choosing a modern database, one of the biggest decisions is picking a relational (SQL) or non-relational (NoSQL) data structure. While both are viable options, there are key differences between the two that users must keep in mind when making a decision.
 
                     Here, we break down the most important distinctions and discuss the best SQL and NoSQL database systems available.
 
@@ -22,7 +22,7 @@ const Blog = () => {
 
             <div className='w-2/3 mt-6 mx-auto bg-slate-200 p-10 rounded-md'>
                 <h1 className='text-3xl font-bold' >What is JWT, and how does it work?</h1>
-                <p>JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.
+                <p className='py-5'>JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.
 
                     A JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.
 
@@ -40,7 +40,7 @@ const Blog = () => {
             </div>
             <div className='w-2/3 mt-6 mx-auto bg-slate-200 p-10 rounded-md'>
                 <h1 className='text-3xl font-bold' >What is the difference between javascript and NodeJS?</h1>
-                <p>
+                <p className='py-5'>
 
                     1. JavaScript is a client-side scripting language that is lightweight, cross-platform, and interpreted. Both Java and HTML include it. Node.js, on the other hand, is a V8-based server-side programming language.
 
@@ -60,8 +60,26 @@ const Blog = () => {
 
                     If you’re interested in becoming a Node.js developer, check out KnowledgeHut’s  best Node.js course today to get started.
                 </p>
+            </div>
+            <div className='w-2/3 mt-6 mx-auto bg-slate-200 p-10 rounded-md'>
+                <h1 className='text-3xl font-bold' >How does NodeJS handle multiple requests at the same time?</h1>
+                <p className='py-5'>
+                    Given a NodeJS application, since Node is single threaded, say if processing involves a Promise.all that takes 8 seconds, does this mean that the client request that comes after this request would need to wait for eight seconds?
+                    No. NodeJS event loop is single threaded. The entire server architecture for NodeJS is not single threaded.
 
+                    Before getting into the Node server architecture, to take a look at typical multithreaded request response model, the web server would have multiple threads and when concurrent requests get to the webserver, the webserver picks threadOne from the threadPool and threadOne processes requestOne and responds to clientOne and when the second request comes in, the web server picks up the second thread from the threadPool and picks up requestTwo and processes it and responds to clientTwo. threadOne is responsible for all kinds of operations that requestOne demanded including doing any blocking IO operations.
 
+                    The fact that the thread needs to wait for blocking IO operations is what makes it inefficient. With this kind of a model, the webserver is only able to serve as much requests as there are threads in the thread pool.
+
+                    NodeJS Web Server maintains a limited Thread Pool to provide services to client requests. Multiple clients make multiple requests to the NodeJS server. NodeJS receives these requests and places them into the EventQueue .
+                    NodeJS server has an internal component referred to as the EventLoop which is an infinite loop that receives requests and processes them. This EventLoop is single threaded. In other words, EventLoop is the listener for the EventQueue.
+                    So, we have an event queue where the requests are being placed and we have an event loop listening to these requests in the event queue. What happens next?
+                    The listener(the event loop) processes the request and if it is able to process the request without needing any blocking IO operations, then the event loop would itself process the request and sends the response back to the client by itself.
+                    If the current request uses blocking IO operations, the event loop sees whether there are threads available in the thread pool, picks up one thread from the thread pool and assigns the particular request to the picked thread. That thread does the blocking IO operations and sends the response back to the event loop and once the response gets to the event loop, the event loop sends the response back to the client.
+
+                    How is NodeJS better than traditional multithreaded request response model?
+                    With traditional multithreaded request/response model, every client gets a different thread where as with NodeJS, the simpler request are all handled directly by the EventLoop. This is an optimization of thread pool resources and there is no overhead of creating the threads for every client request.
+                </p>
             </div>
         </div>
     );
