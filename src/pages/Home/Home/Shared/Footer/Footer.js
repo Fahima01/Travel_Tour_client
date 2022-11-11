@@ -1,14 +1,16 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import logo from '../../../../../assets/log.png'
 const Footer = () => {
     return (
         <div>
             <footer className="footer footer-center p-10 bg-zinc-900 text-white rounded">
+                <img className='w-20' src={logo} alt="" />
                 <div className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <Link to='/'> <a className="link link-hover">Home</a> </Link>
+                    <Link to='/packages'> <a className="link link-hover">Destination packages</a> </Link>
+                    <Link to='/blog'> <a className="link link-hover">Blog</a> </Link>
+
                 </div>
                 <div>
                     <div className="grid grid-flow-col gap-4">
@@ -18,7 +20,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2022 - All right reserved by Travel-Tour</p>
                 </div>
             </footer>
         </div>
