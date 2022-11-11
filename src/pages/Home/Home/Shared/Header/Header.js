@@ -57,7 +57,7 @@ const Header = () => {
                                     </label>
                                     <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                         <li><a>{user?.displayName}</a></li>
-                                        <li><a>My Reviews</a></li>
+                                        <Link to='/reviews'> <li><a>My Reviews</a></li></Link>
                                     </ul>
                                 </div>
 
