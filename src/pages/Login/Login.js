@@ -5,7 +5,9 @@ import { AuthContext } from '../../context/Authprovider';
 
 const Login = () => {
 
-    const { login } = useContext(AuthContext)
+    const { login, loading } = useContext(AuthContext)
+
+
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
@@ -21,10 +23,18 @@ const Login = () => {
                 console.log(user);
                 form.reset();
                 navigate(from, { replace: true })
+
             })
 
             .catch(err => console.error(err))
     }
+
+    if (loading) {
+        return <div class="flex flex-row space-x-4">
+
+            <div class="w-12 h-12 rounded-full animate-spin
+    border border-solid border-yellow-500 border-t-transparent"></div></div>
+    };
 
     return (
         <div className='h-auto bg-cyan-900 pt-10 pb-12'>

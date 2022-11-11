@@ -4,8 +4,6 @@ import SinglePackageCard from './SinglePackageCard';
 
 const AllPackages = () => {
     const [allPackages, setAllPackages] = useState([]);
-
-
     useEffect(() => {
         fetch('http://localhost:5000/allpackages')
             .then(res => res.json())
