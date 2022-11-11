@@ -1,15 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import SinglePackageCard from './SinglePackageCard';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/Authprovider';
 
 
 const AllPackages = () => {
+
     const [allPackages, setAllPackages] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/allpackages')
             .then(res => res.json())
             .then(data => setAllPackages(data))
-
     }, [])
+
+    const { loading } = useContext(AuthContext)
+    if (loading) {
+        return <div class="flex flex-row space-x-4">
+
+            <div class="w-12 h-12 rounded-full animate-spin
+    border border-solid border-yellow-500 border-t-transparent"></div></div>
+    };
+
     return (
         <div className='mx-auto text-center mt-32 h-auto justify-center items-center'>
             <div >
