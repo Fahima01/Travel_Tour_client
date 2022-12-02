@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { json, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/Authprovider';
 
@@ -20,9 +20,29 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+
+
+                const currentUser = {
+                    email: user.email
+                }
+                console.log(currentUser);
                 form.reset();
-                navigate(from, { replace: true })
+
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        localStorage.setItem('tour-Token', data.token)
+                        navigate(from, { replace: true })
+                    })
+
 
             })
 

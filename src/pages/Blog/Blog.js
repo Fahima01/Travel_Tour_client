@@ -26,7 +26,7 @@ const Blog = () => {
 
                     A JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.
 
-                    Once decoded, you will get two JSON strings:
+                    Once de-code, you will get two JSON strings:
 
                     The header and the payload.
                     The signature.

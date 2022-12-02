@@ -35,7 +35,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <div className="navbar-end gap-3  w-96 mx-auto">
+                <div className="navbar-end gap-3  w-96 mx-auto ml-7">
                     {
                         user?.email ?
                             <>
@@ -44,20 +44,23 @@ const Header = () => {
                                 <div className="dropdown dropdown-hover">
                                     <label tabIndex={0} className="m-1">
 
-                                        <label tabIndex={0} className="avatar  w-full"> {user?.photoURL ?
-                                            <div className="avatar w-10">
-                                                <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                    <img src={user?.photoURL} alt='' />
+                                        <label tabIndex={0} className="avatar  w-full">
+                                            {user?.photoURL ?
+                                                <div className="avatar w-10">
+                                                    <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                                        <img src={user?.photoURL} alt='' />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            :
-                                            <FaUser></FaUser>
-                                        }</label>
+                                                :
+                                                <FaUser></FaUser>
+                                            }</label>
 
                                     </label>
                                     <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                                        <li><a>{user?.displayName}</a></li>
+                                        <li><a >{user?.email}</a></li>
+
                                         <Link to='/reviews'> <li><a>My Reviews</a></li></Link>
+                                        <Link to='/addpackages'> <li><a>Add Packages</a></li></Link>
                                     </ul>
                                 </div>
 

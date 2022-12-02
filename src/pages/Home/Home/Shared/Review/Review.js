@@ -1,13 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../../../../../context/Authprovider';
 import ReviewRow from '../../../../Package/ReviewRow';
 const Review = ({ id }) => {
     const [reviews, setReviews] = useState([])
+    const { logOut } = useContext(AuthContext)
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?/packageId=${id}`)
-            .then(res => res.json())
-            .then(data => setReviews(data))
+        fetch(`http://localhost:5000/reviews?/packageId=${id}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('tour-Token')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut();
+                }
+                return res.json()
+            })
+            .then(data => {
+                setReviews(data)
+            })
     }, [id])
 
     return (
@@ -37,3 +50,5 @@ const Review = ({ id }) => {
 };
 
 export default Review;
+
+//20223456Ag_

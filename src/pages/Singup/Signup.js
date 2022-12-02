@@ -27,6 +27,7 @@ const Signup = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        const name = form.name.value
 
         if (password.length < 6) {
             setError('Password should be 6 characters or more.')
@@ -36,7 +37,7 @@ const Signup = () => {
 
 
 
-        createUser(email, password)
+        createUser(email, password, name)
             .then(result => {
                 const user = result.user;
                 setUser(user)

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../Layout/Main';
+import AddPackages from '../../pages/AddPackages/AddPackages';
 import AllPackages from '../../pages/All_packages/AllPackages';
 import Blog from '../../pages/Blog/Blog';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage';
@@ -9,6 +10,7 @@ import Review from '../../pages/Home/Home/Shared/Review/Review';
 import Login from '../../pages/Login/Login';
 import PackageDetails from '../../pages/Package/PackageDetails';
 import Signup from '../../pages/Singup/Signup';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog>
             },
+            {
+                path: '/packagesDetails',
+                element: <PrivateRoute> <PackageDetails></PackageDetails>  </PrivateRoute>
+            },
+            {
+                path: '/addpackages',
+                element: <PrivateRoute> <AddPackages></AddPackages>  </PrivateRoute>
+            }
 
 
         ]

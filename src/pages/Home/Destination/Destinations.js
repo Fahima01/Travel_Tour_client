@@ -29,7 +29,7 @@ const Destinations = () => {
                 }
 
             </div>
-            <Link to={'/allpackages'}>
+            <Link to={'/packages'}>
                 <button className="btn btn-accent rounded-lg mt-10">See All</button>
             </Link>
         </div>
