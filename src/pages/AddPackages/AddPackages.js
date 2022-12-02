@@ -26,7 +26,7 @@ const AddPackages = () => {
 
         }
         // save packages
-        fetch('http://localhost:5000/userPackage', {
+        fetch('https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/userPackage', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

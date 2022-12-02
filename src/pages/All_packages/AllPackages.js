@@ -8,7 +8,7 @@ const AllPackages = () => {
 
     const [allPackages, setAllPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/allpackages')
+        fetch('https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/allpackages')
             .then(res => res.json())
             .then(data => setAllPackages(data))
     }, [])

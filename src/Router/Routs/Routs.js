@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             {
                 path: '/packagesDetails/:id',
                 element: <PackageDetails></PackageDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/packages/${params.id}`)
+                loader: ({ params }) => fetch(`https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/packages/${params.id}`)
 
             },
             {

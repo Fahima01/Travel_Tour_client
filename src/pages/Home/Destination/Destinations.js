@@ -7,7 +7,7 @@ const Destinations = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
 

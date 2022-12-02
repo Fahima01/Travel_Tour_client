@@ -7,7 +7,7 @@ const Review = ({ id }) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?/packageId=${id}`, {
+        fetch(`https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/reviews?/packageId=${id}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('tour-Token')}`
             }

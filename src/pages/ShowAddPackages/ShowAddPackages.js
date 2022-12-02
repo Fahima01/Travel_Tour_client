@@ -5,7 +5,7 @@ import ShowPakSingle from './ShowPakSingle';
 const ShowAddPackages = () => {
     const [addpackages, setAddpackages] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/userPackage`)
+        fetch(`https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/userPackage`)
             .then(res => res.json())
             .then(data => setAddpackages(data))
 
@@ -20,7 +20,7 @@ const ShowAddPackages = () => {
     return (
         <div className='mx-auto text-center mt-32 h-auto justify-center items-center'>
             <div >
-                <h1 className='text-5xl font-bold mb-6'>Top <span className='text-emerald-400'> New Destinations</span> Add {addpackages.length}</h1>
+                <h1 className='text-5xl font-bold mb-6'><span className='text-emerald-400'> New Destinations</span> Add</h1>
                 <p className='w-2/5 text-center mx-auto text-lg text-zinc-400 mb-8'>Explore our top destinations voted by more than 100,000+ customers around the world.</p>
             </div>
 

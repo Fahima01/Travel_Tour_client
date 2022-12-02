@@ -35,7 +35,7 @@ const PackageDetails = () => {
             name
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://b6a11-service-review-server-side-fahima01-fahima01.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -125,7 +125,7 @@ const PackageDetails = () => {
                 </form>
 
             </div>
-            <div className='w-2/3 mx-auto bg-slate-100 p-10 rounded-md' >
+            <div className='w-4/5 h-screen mx-auto bg-slate-100 p-10 rounded-md' >
                 <Review></Review>
 
             </div>
